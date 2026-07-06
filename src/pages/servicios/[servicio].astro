@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { servicio: 'gasfiteria' }, props: { title: 'Gasfitería', desc: 'Reparación de filtraciones, instalación de sanitarios, destapes y mantención de redes de agua y gas.', icon: 'plumbing' } },
+    { params: { servicio: 'soldadura' }, props: { title: 'Soldadura', desc: 'Estructuras metálicas, rejas, portones, reparaciones industriales y domésticas.', icon: 'hardware' } },
+    { params: { servicio: 'electricidad' }, props: { title: 'Electricidad Básica', desc: 'Instalación de enchufes, luminarias, detección de cortes y cableado seguro.', icon: 'electric_bolt' } },
+    { params: { servicio: 'construccion' }, props: { title: 'Construcción General', desc: 'Ampliaciones, radieres, tabiquería, pintura y terminaciones.', icon: 'home_repair_service' } },
+  ];
+}
+
+const { servicio } = Astro.params;
+const { title, desc, icon } = Astro.props;
+---
+
+<Layout title={`${title} - JPVS Servicio Garantizado`}>
+  <Navbar />
+  
+  <main class="min-h-screen pt-32 pb-24 px-grid-gutter relative overflow-hidden">
+    <!-- Glow effect -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="max-w-[1200px] mx-auto relative z-10">
+      <div class="mb-12">
+        <a href="/#servicios" class="inline-flex items-center gap-2 text-secondary hover:text-white transition-colors mb-8 font-body-md">
+          <span class="material-symbols-outlined">arrow_back</span> Volver a servicios
+        </a>
+        
+        <div class="flex items-center gap-4 mb-6">
+          <div class="w-16 h-16 rounded-2xl bg-surface-container border border-secondary flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(173,199,255,0.2)]">
+            <span class="material-symbols-outlined text-[32px]">{icon}</span>
+          </div>
+          <h1 class="font-display-lg text-4xl md:text-5xl text-on-surface">{title}</h1>
+        </div>
+        <p class="font-body-lg text-on-surface-variant max-w-2xl">{desc}</p>
+      </div>
+
+      <div class="bg-surface-container rounded-[2rem] border border-white/10 p-12 text-center my-16 shadow-2xl">
+        <span class="material-symbols-outlined text-6xl text-white/20 mb-4 block">photo_library</span>
+        <h2 class="font-headline-md text-2xl text-on-surface mb-2">Galería de Trabajos - Próximamente</h2>
+        <p class="font-body-md text-on-surface-variant max-w-md mx-auto">
+          Estamos preparando una selección de fotos del "Antes y Después" para mostrarte la calidad de los trabajos realizados en {title.toLowerCase()}.
+        </p>
+      </div>
+
+      <!-- Placeholder grid where they will upload photos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 opacity-30 pointer-events-none">
+        <div class="aspect-square bg-surface border border-white/5 rounded-2xl flex items-center justify-center flex-col gap-2">
+          <span class="material-symbols-outlined text-3xl">image</span>
+          <span class="font-label-sm">Espacio para foto</span>
+        </div>
+        <div class="aspect-square bg-surface border border-white/5 rounded-2xl flex items-center justify-center flex-col gap-2">
+          <span class="material-symbols-outlined text-3xl">image</span>
+          <span class="font-label-sm">Espacio para foto</span>
+        </div>
+        <div class="aspect-square bg-surface border border-white/5 rounded-2xl flex items-center justify-center flex-col gap-2">
+          <span class="material-symbols-outlined text-3xl">image</span>
+          <span class="font-label-sm">Espacio para foto</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>

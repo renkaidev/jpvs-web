@@ -1,0 +1,113 @@
+---
+---
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface border-y border-white/10" id="metodologia">
+  <div class="max-w-[1200px] mx-auto px-grid-gutter">
+    <div class="text-center mb-16 md:mb-24 gs-methodology-header">
+      <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface mb-4">¿Cómo Trabajo?</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant">Un proceso estructurado para garantizar transparencia y calidad desde el primer contacto.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-8 relative gs-methodology-steps">
+      <!-- Connecting Line (Desktop) -->
+      <div class="hidden lg:block absolute top-12 left-[10%] right-[10%] h-[2px] bg-white/10 z-0 gs-methodology-line"></div>
+      
+      <!-- Steps -->
+      <div class="relative z-10 flex flex-col items-center text-center group method-step">
+        <div class="w-24 h-24 rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary group-hover:shadow-[0_0_15px_rgba(173,199,255,0.2)] transition-all">
+          <span class="font-label-sm text-label-sm text-secondary block absolute top-2">01</span>
+          <span class="material-symbols-outlined text-on-surface text-[32px]">search</span>
+        </div>
+        <h4 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Revisión</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Diagnóstico preciso en terreno.</p>
+      </div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center group method-step">
+        <div class="w-24 h-24 rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary group-hover:shadow-[0_0_15px_rgba(173,199,255,0.2)] transition-all">
+          <span class="font-label-sm text-label-sm text-secondary block absolute top-2">02</span>
+          <span class="material-symbols-outlined text-on-surface text-[32px]">chat</span>
+        </div>
+        <h4 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Explicación</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Detallo el problema y solución.</p>
+      </div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center group method-step">
+        <div class="w-24 h-24 rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary group-hover:shadow-[0_0_15px_rgba(173,199,255,0.2)] transition-all">
+          <span class="font-label-sm text-label-sm text-secondary block absolute top-2">03</span>
+          <span class="material-symbols-outlined text-on-surface text-[32px]">request_quote</span>
+        </div>
+        <h4 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Cotización</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Presupuesto claro y sin sorpresas.</p>
+      </div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center group method-step">
+        <div class="w-24 h-24 rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary group-hover:shadow-[0_0_15px_rgba(173,199,255,0.2)] transition-all">
+          <span class="font-label-sm text-label-sm text-secondary block absolute top-2">04</span>
+          <span class="material-symbols-outlined text-on-surface text-[32px]">thumb_up</span>
+        </div>
+        <h4 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Aprobación</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Usted decide cuándo iniciar.</p>
+      </div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center group method-step">
+        <div class="w-24 h-24 rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary group-hover:shadow-[0_0_15px_rgba(173,199,255,0.2)] transition-all">
+          <span class="font-label-sm text-label-sm text-secondary block absolute top-2">05</span>
+          <span class="material-symbols-outlined text-on-surface text-[32px]">construction</span>
+        </div>
+        <h4 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Ejecución</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Trabajo prolijo y eficiente.</p>
+      </div>
+      
+      <div class="relative z-10 flex flex-col items-center text-center group method-step">
+        <div class="w-24 h-24 rounded-full bg-surface-container border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary group-hover:shadow-[0_0_15px_rgba(173,199,255,0.2)] transition-all">
+          <span class="font-label-sm text-label-sm text-secondary block absolute top-2">06</span>
+          <span class="material-symbols-outlined text-on-surface text-[32px]">verified</span>
+        </div>
+        <h4 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Verificación</h4>
+        <p class="font-body-md text-body-md text-on-surface-variant">Prueba final y limpieza del área.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from(".gs-methodology-header", {
+    scrollTrigger: {
+      trigger: "#metodologia",
+      start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  
+  gsap.from(".method-step", {
+    scrollTrigger: {
+      trigger: ".gs-methodology-steps",
+      start: "top 85%",
+    },
+    scale: 0.8,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: "back.out(1.5)"
+  });
+  
+  gsap.fromTo(".gs-methodology-line", 
+    { scaleX: 0, transformOrigin: "left center" },
+    {
+      scaleX: 1,
+      duration: 1.5,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".gs-methodology-steps",
+        start: "top 80%",
+      }
+    }
+  );
+</script>

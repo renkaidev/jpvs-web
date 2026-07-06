@@ -1,0 +1,59 @@
+---
+---
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface border-b border-white/10" id="proyectos">
+  <div class="max-w-[1200px] mx-auto px-grid-gutter">
+    <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface mb-12 text-center gs-projects-header">Antes y Después</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 gs-projects-grid">
+      <div class="bg-surface-container rounded-2xl overflow-hidden border border-white/10 project-card group relative">
+        <div class="overflow-hidden">
+          <img src="/assets/plumbing_repair_1783373752969.jpg" alt="Reparación de Gasfitería" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 relative z-10 bg-surface-container">
+          <h3 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Renovación de cañerías</h3>
+          <p class="font-body-md text-on-surface-variant">Instalación completa de tuberías de cobre bajo lavamanos. Trabajo limpio y garantizado sin filtraciones.</p>
+        </div>
+      </div>
+      
+      <div class="bg-surface-container rounded-2xl overflow-hidden border border-white/10 project-card group relative">
+        <div class="overflow-hidden">
+          <img src="/assets/welding_repair_1783373761433.jpg" alt="Trabajo de Soldadura" class="w-full h-64 object-cover transform group-hover:scale-105 transition-transform duration-500">
+        </div>
+        <div class="p-6 relative z-10 bg-surface-container">
+          <h3 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-2">Reparación de reja metálica</h3>
+          <p class="font-body-md text-on-surface-variant">Soldadura precisa y pulida en portón de acceso, devolviendo la seguridad estructural al hogar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from(".gs-projects-header", {
+    scrollTrigger: {
+      trigger: "#proyectos",
+      start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  
+  gsap.from(".project-card", {
+    scrollTrigger: {
+      trigger: ".gs-projects-grid",
+      start: "top 85%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "power3.out"
+  });
+</script>

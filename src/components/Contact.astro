@@ -1,0 +1,66 @@
+---
+---
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest" id="contacto">
+  <div class="max-w-[1200px] mx-auto px-grid-gutter text-center gs-contact-section">
+    <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface mb-6">Contácteme Hoy Mismo</h2>
+    <p class="font-body-lg text-on-surface-variant max-w-2xl mx-auto mb-12">
+      Estoy listo para solucionar sus problemas de manera profesional y rápida. Horario de atención: 09:00 a 17:00 (continuo).
+    </p>
+    
+    <div class="flex flex-wrap justify-center gap-6 contact-buttons">
+      <div class="btn-wrapper">
+        <a href="https://wa.me/56975365503" class="flex items-center gap-2 bg-[#25D366] text-white px-8 py-4 rounded-xl font-headline-md text-body-lg font-bold hover:bg-[#20b858] transition-colors shadow-[0_0_20px_rgba(37,211,102,0.1)] hover:shadow-[0_0_30px_rgba(37,211,102,0.3)]">
+          <span class="material-symbols-outlined">chat</span> WhatsApp
+        </a>
+      </div>
+      <div class="btn-wrapper">
+        <a href="tel:+56975365503" class="flex items-center gap-2 bg-transparent border-2 border-secondary text-secondary px-8 py-4 rounded-xl font-headline-md text-body-lg font-bold hover:bg-secondary/10 transition-colors">
+          <span class="material-symbols-outlined">call</span> Llamar
+        </a>
+      </div>
+      <div class="btn-wrapper">
+        <a href="#" class="flex items-center gap-2 bg-surface-container border border-white/10 text-on-surface px-8 py-4 rounded-xl font-headline-md text-body-lg font-bold hover:border-secondary transition-colors">
+          <span class="material-symbols-outlined">thumb_up</span> Facebook
+        </a>
+      </div>
+      <div class="btn-wrapper">
+        <a href="#" class="flex items-center gap-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white px-8 py-4 rounded-xl font-headline-md text-body-lg font-bold hover:opacity-90 transition-opacity shadow-lg hover:shadow-xl">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+          Instagram
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from(".gs-contact-section > h2, .gs-contact-section > p", {
+    scrollTrigger: {
+      trigger: "#contacto",
+      start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: "power3.out"
+  });
+  
+  gsap.from(".btn-wrapper", {
+    scrollTrigger: {
+      trigger: ".contact-buttons",
+      start: "top 90%",
+    },
+    scale: 0.9,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.1,
+    ease: "back.out(1.5)",
+    clearProps: "all"
+  });
+</script>

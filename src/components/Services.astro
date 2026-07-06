@@ -1,0 +1,74 @@
+---
+---
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest relative" id="servicios">
+  <div class="max-w-[1200px] mx-auto px-grid-gutter">
+    <div class="mb-16 md:mb-24 text-center md:text-left gs-services-header">
+      <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface mb-4">Servicios Especializados</h2>
+      <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Maestría técnica aplicada a cada detalle de su proyecto, asegurando resultados duraderos y seguros.</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 gs-services-cards">
+      <!-- Service Card 1 -->
+      <a href="/servicios/gasfiteria" class="bg-surface-container rounded-xl p-8 border border-white/10 hover:border-secondary transition-colors group relative overflow-hidden flex flex-col h-full service-card cursor-pointer block">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full pointer-events-none group-hover:bg-secondary/10 transition-colors"></div>
+        <span class="material-symbols-outlined text-secondary text-[48px] mb-6 block">plumbing</span>
+        <h3 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-4">Gasfitería</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Reparación de filtraciones, instalación de sanitarios, destapes y mantención de redes de agua y gas.</p>
+      </a>
+      
+      <!-- Service Card 2 -->
+      <a href="/servicios/soldadura" class="bg-surface-container rounded-xl p-8 border border-white/10 hover:border-secondary transition-colors group relative overflow-hidden flex flex-col h-full service-card cursor-pointer block">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full pointer-events-none group-hover:bg-secondary/10 transition-colors"></div>
+        <span class="material-symbols-outlined text-secondary text-[48px] mb-6 block">hardware</span>
+        <h3 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-4">Soldadura</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Estructuras metálicas, rejas, portones, reparaciones industriales y domésticas con acabados precisos.</p>
+      </a>
+      
+      <!-- Service Card 3 -->
+      <a href="/servicios/electricidad" class="bg-surface-container rounded-xl p-8 border border-white/10 hover:border-secondary transition-colors group relative overflow-hidden flex flex-col h-full service-card cursor-pointer block">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full pointer-events-none group-hover:bg-secondary/10 transition-colors"></div>
+        <span class="material-symbols-outlined text-secondary text-[48px] mb-6 block">electric_bolt</span>
+        <h3 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-4">Electricidad Básica</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Instalación de enchufes, luminarias, detección de cortes, cambio de automáticos y cableado seguro.</p>
+      </a>
+      
+      <!-- Service Card 4 -->
+      <a href="/servicios/construccion" class="bg-surface-container rounded-xl p-8 border border-white/10 hover:border-secondary transition-colors group relative overflow-hidden flex flex-col h-full service-card cursor-pointer block">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/5 rounded-bl-full pointer-events-none group-hover:bg-secondary/10 transition-colors"></div>
+        <span class="material-symbols-outlined text-secondary text-[48px] mb-6 block">home_repair_service</span>
+        <h3 class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface mb-4">Construcción General</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant flex-grow">Ampliaciones, radieres, tabiquería, pintura y terminaciones con estándar profesional y limpieza.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from(".gs-services-header", {
+    scrollTrigger: {
+      trigger: "#servicios",
+      start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  
+  gsap.from(".service-card", {
+    scrollTrigger: {
+      trigger: ".gs-services-cards",
+      start: "top 85%",
+    },
+    y: 50,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.2,
+    ease: "back.out(1.7)"
+  });
+</script>

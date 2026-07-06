@@ -1,0 +1,51 @@
+---
+---
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest border-b border-white/10" id="cobertura">
+  <div class="max-w-[1200px] mx-auto px-grid-gutter flex flex-col md:flex-row items-center gap-12 gs-coverage-section">
+    <div class="w-full md:w-1/2 gs-coverage-text">
+      <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface mb-4">Zona de Cobertura</h2>
+      <p class="font-body-lg text-on-surface-variant mb-6">Atendemos con rapidez y eficiencia en la ciudad de <strong class="text-secondary">Cauquenes y sus alrededores</strong>.</p>
+      <ul class="space-y-2 text-on-surface-variant font-body-md">
+        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">location_on</span> Zona urbana de Cauquenes</li>
+        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">location_on</span> Zonas rurales cercanas</li>
+        <li class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary">location_on</span> Sectores aledaños</li>
+      </ul>
+    </div>
+    
+    <div class="w-full md:w-1/2 bg-surface-container h-64 rounded-2xl border border-white/10 flex items-center justify-center flex-col text-on-surface-variant gs-coverage-map relative overflow-hidden group">
+      <div class="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors duration-500 pointer-events-none"></div>
+      <span class="material-symbols-outlined text-6xl text-secondary mb-2 transform group-hover:scale-110 transition-transform duration-500">map</span>
+      <p class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface">Mapa de Cauquenes</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from(".gs-coverage-text", {
+    scrollTrigger: {
+      trigger: ".gs-coverage-section",
+      start: "top 80%",
+    },
+    x: -50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  
+  gsap.from(".gs-coverage-map", {
+    scrollTrigger: {
+      trigger: ".gs-coverage-section",
+      start: "top 80%",
+    },
+    x: 50,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out",
+    delay: 0.2
+  });
+</script>

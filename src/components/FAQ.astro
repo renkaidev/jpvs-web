@@ -1,0 +1,79 @@
+---
+---
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface border-b border-white/10" id="faq">
+  <div class="max-w-[800px] mx-auto px-grid-gutter">
+    <h2 class="font-headline-lg text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-on-surface mb-12 text-center gs-faq-header">Preguntas Frecuentes</h2>
+    
+    <div class="space-y-4 gs-faq-list">
+      <details class="bg-surface-container rounded-lg border border-white/10 group faq-item">
+        <summary class="flex justify-between items-center font-headline-md text-2xl md:text-3xl font-bold text-on-surface cursor-pointer p-6">
+          ¿Atiendes emergencias?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="p-6 pt-0 text-on-surface-variant font-body-md">
+          Sí, ofrezco servicio para emergencias fuera del horario habitual según disponibilidad.
+        </div>
+      </details>
+      
+      <details class="bg-surface-container rounded-lg border border-white/10 group faq-item">
+        <summary class="flex justify-between items-center font-headline-md text-2xl md:text-3xl font-bold text-on-surface cursor-pointer p-6">
+          ¿Trabajas fines de semana?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="p-6 pt-0 text-on-surface-variant font-body-md">
+          Sí, trabajo los fines de semana. Puede agendar su visita con anticipación.
+        </div>
+      </details>
+      
+      <details class="bg-surface-container rounded-lg border border-white/10 group faq-item">
+        <summary class="flex justify-between items-center font-headline-md text-2xl md:text-3xl font-bold text-on-surface cursor-pointer p-6">
+          ¿Emites boleta?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="p-6 pt-0 text-on-surface-variant font-body-md">
+          Sí, emito boleta de honorarios por todos los trabajos realizados para su total tranquilidad.
+        </div>
+      </details>
+      
+      <details class="bg-surface-container rounded-lg border border-white/10 group faq-item">
+        <summary class="flex justify-between items-center font-headline-md text-2xl md:text-3xl font-bold text-on-surface cursor-pointer p-6">
+          ¿Cómo solicito un presupuesto?
+          <span class="material-symbols-outlined group-open:rotate-180 transition-transform">expand_more</span>
+        </summary>
+        <div class="p-6 pt-0 text-on-surface-variant font-body-md">
+          Puede contactarme vía WhatsApp o por llamada. Tras una evaluación en terreno, le entregaré un presupuesto detallado y transparente.
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
+  gsap.registerPlugin(ScrollTrigger);
+  
+  gsap.from(".gs-faq-header", {
+    scrollTrigger: {
+      trigger: "#faq",
+      start: "top 80%",
+    },
+    y: 30,
+    opacity: 0,
+    duration: 1,
+    ease: "power3.out"
+  });
+  
+  gsap.from(".faq-item", {
+    scrollTrigger: {
+      trigger: ".gs-faq-list",
+      start: "top 85%",
+    },
+    y: 20,
+    opacity: 0,
+    duration: 0.5,
+    stagger: 0.15,
+    ease: "power2.out"
+  });
+</script>
