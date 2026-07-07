@@ -3,9 +3,13 @@ import '../styles/global.css';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { 
+  title, 
+  description = "JPVS Gasfiter - Servicios garantizados de gasfitería, soldadura, electricidad y construcción en Cauquenes y alrededores. Rapidez, limpieza y transparencia." 
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -16,6 +20,42 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="gasfiter cauquenes, gasfiteria cauquenes, soldadura cauquenes, electricista cauquenes, construccion cauquenes, jpvs gasfiter, maestro cauquenes, gasfiter a domicilio, reparaciones cauquenes" />
+    <meta name="author" content="JPVS Gasfiter" />
+    <meta name="google-site-verification" content="Mk63Wr_S72q6Q0gCAym26JcAiZYuYwkvEUNhnIAI5Bw" />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="JPVS Gasfiter" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:image" content="https://jpvs-web.renkaidev.workers.dev/assets/JPVS.jpg" />
+    
+    <!-- Schema.org para Negocio Local -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Plumber",
+        "name": "JPVS Gasfiter",
+        "image": "https://www.instagram.com/jpvs_gasfiter/",
+        "description": "Servicios integrales de gasfitería, soldadura, electricidad y construcción en Cauquenes.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cauquenes",
+          "addressRegion": "Maule",
+          "addressCountry": "CL"
+        },
+        "telephone": "+56975365503",
+        "url": "https://www.instagram.com/jpvs_gasfiter/",
+        "priceRange": "$$",
+        "areaServed": {
+          "@type": "City",
+          "name": "Cauquenes"
+        }
+      }
+    </script>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
