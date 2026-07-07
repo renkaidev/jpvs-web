@@ -1,0 +1,66 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="Políticas de Privacidad | JPVS">
+  <Navbar />
+  
+  <main class="pt-section-gap-mobile md:pt-section-gap-desktop pb-section-gap-mobile md:pb-section-gap-desktop min-h-[80vh]">
+    <div class="max-w-[800px] mx-auto px-grid-gutter text-on-surface-variant">
+      
+      <h1 class="font-headline-lg text-4xl md:text-5xl font-bold text-on-surface mb-8">Políticas de Privacidad</h1>
+      
+      <div class="prose prose-invert prose-lg">
+        <p class="mb-6 font-body-lg text-xl text-on-surface">
+          En <strong>JPVS - Servicio Garantizado</strong>, nos tomamos muy en serio su privacidad. 
+          Esta política ha sido redactada en estricto cumplimiento con la <strong>Ley N° 19.628 sobre Protección de la Vida Privada de la República de Chile</strong>, 
+          y tomando como referencia los controles de seguridad y gestión de la información de la normativa internacional <strong>ISO/IEC 27001</strong>.
+        </p>
+
+        <h2 class="font-headline-md text-2xl font-bold text-secondary mt-12 mb-4">1. Recopilación Nula de Datos Automatizados</h2>
+        <p class="mb-6">
+          Esta plataforma web tiene un propósito exclusivamente <strong>informativo</strong> y de presentación de servicios. 
+          Queremos ser absolutamente transparentes: <strong>nuestra página web NO recopila datos personales de los usuarios</strong>. 
+          No utilizamos formularios de registro, no requerimos la creación de cuentas, ni almacenamos información en bases de datos a través del sitio web.
+        </p>
+
+        <h2 class="font-headline-md text-2xl font-bold text-secondary mt-8 mb-4">2. Cookies y Seguimiento</h2>
+        <p class="mb-6">
+          Este sitio ha sido diseñado respetando la premisa de <em>privacidad por diseño</em>. No utilizamos cookies invasivas, píxeles de rastreo activos de terceros orientados a la publicidad comportamental, ni herramientas de recolección masiva de métricas que comprometan su anonimato en la red.
+        </p>
+
+        <h2 class="font-headline-md text-2xl font-bold text-secondary mt-8 mb-4">3. Interacción Directa y Datos Voluntarios</h2>
+        <p class="mb-6">
+          La única vía mediante la cual podríamos acceder a sus datos (como su número de teléfono, nombre o dirección) es si <strong>usted decide contactarnos voluntariamente</strong> a través de nuestros canales directos (llamada telefónica o WhatsApp) expuestos en el sitio.
+          En ese caso, dichos datos serán tratados exclusivamente para:
+        </p>
+        <ul class="list-disc pl-6 mb-6 space-y-2">
+          <li>Coordinar visitas técnicas.</li>
+          <li>Entregar cotizaciones o presupuestos.</li>
+          <li>Prestar el servicio solicitado y gestionar su posterior garantía.</li>
+        </ul>
+
+        <h2 class="font-headline-md text-2xl font-bold text-secondary mt-8 mb-4">4. Seguridad de la Información (Alineación ISO 27001)</h2>
+        <p class="mb-6">
+          Aunque no poseemos bases de datos digitales vinculadas a esta página, la información que usted nos proporcione por vías de mensajería (WhatsApp) o telefónicas se gestiona de acuerdo a principios de <strong>Confidencialidad, Integridad y Disponibilidad</strong>. 
+          Aseguramos que su información de contacto jamás será vendida, arrendada o compartida con terceros ajenos a la prestación del servicio técnico.
+        </p>
+
+        <h2 class="font-headline-md text-2xl font-bold text-secondary mt-8 mb-4">5. Sus Derechos (Derechos ARCO)</h2>
+        <p class="mb-6">
+          En conformidad a la legislación chilena (Ley 19.628), usted es dueño absoluto de sus datos personales. En cualquier momento puede ejercer sus derechos de <strong>Acceso, Rectificación, Cancelación y Oposición</strong> respecto a la información que nos haya provisto contactándonos directamente a nuestro canal de WhatsApp.
+        </p>
+
+        <h2 class="font-headline-md text-2xl font-bold text-secondary mt-8 mb-4">6. Vigencia y Modificaciones</h2>
+        <p class="mb-6">
+          Nos reservamos el derecho a modificar esta Política de Privacidad para adaptarla a futuras novedades legislativas o jurisprudenciales de Chile. La fecha de última actualización es el <em>{new Date().toLocaleDateString('es-CL')}</em>.
+        </p>
+
+      </div>
+    </div>
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant hover (&:hover);
+@variant group-hover (:merge(.group):hover &);
 @theme {
   --color-surface: transparent;
   --color-on-surface: #e4e2e4;
@@ -87,7 +89,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; Removed because it breaks GSAP ScrollTrigger */
 }
 
 /* Material Symbols configuration */

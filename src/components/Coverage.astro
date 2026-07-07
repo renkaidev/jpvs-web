@@ -12,10 +12,19 @@
       </ul>
     </div>
     
-    <div class="w-full md:w-1/2 bg-surface-container h-64 rounded-2xl border border-white/10 flex items-center justify-center flex-col text-on-surface-variant gs-coverage-map relative overflow-hidden group">
-      <div class="absolute inset-0 bg-secondary/5 group-hover:bg-secondary/10 transition-colors duration-500 pointer-events-none"></div>
-      <span class="material-symbols-outlined text-6xl text-secondary mb-2 transform group-hover:scale-110 transition-transform duration-500">map</span>
-      <p class="font-headline-md text-2xl md:text-3xl font-bold text-on-surface">Mapa de Cauquenes</p>
+    <div class="w-full md:w-1/2 bg-surface-container h-80 md:h-96 rounded-2xl border border-white/10 flex items-center justify-center flex-col text-on-surface-variant gs-coverage-map relative overflow-hidden group shadow-[0_0_30px_rgba(185,199,228,0.05)]">
+      <!-- Overlay para mantener estética oscura que se desvanece al interactuar -->
+      <div class="absolute inset-0 bg-secondary/10 pointer-events-none z-10 transition-opacity duration-500 group-hover:opacity-0"></div>
+      <!-- Mapa gratuito de Google Maps (no requiere API key ni cobros) adaptado a Dark Mode -->
+      <iframe 
+        title="Mapa de Cauquenes, Chile"
+        src="https://maps.google.com/maps?q=Cauquenes,Chile&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+        class="w-full h-full relative z-0" 
+        style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(85%);" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>
